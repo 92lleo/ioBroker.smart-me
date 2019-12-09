@@ -1,0 +1,96 @@
+{
+    "common": {
+        "name": "smart-me",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "smart-me",
+        "titleLang": {
+            "en": "smart-me",
+            "de": "schlau-ich",
+            "ru": "смарт-я",
+            "pt": "smart-me",
+            "nl": "smart-me",
+            "fr": "smart-me",
+            "it": "smart-me",
+            "es": "inteligente",
+            "pl": "smart-me",
+            "zh-cn": "聪明的我"
+        },
+        "desc": {
+            "en": "Control and fetch data from smart-me devices",
+            "de": "Steuern und Abrufen von Daten von Smart-Me-Geräten",
+            "ru": "Контроль и получение данных с устройств Smart-Me",
+            "pt": "Controlar e buscar dados de dispositivos smart-me",
+            "nl": "Beheer en haal gegevens op van smart-me-apparaten",
+            "fr": "Contrôlez et récupérez les données des appareils Smart-me",
+            "it": "Controlla e recupera i dati dai dispositivi smart-me",
+            "es": "Controle y obtenga datos de dispositivos inteligentes",
+            "pl": "Kontroluj i pobieraj dane z urządzeń smart-me",
+            "zh-cn": "从智能设备控制和获取数据"
+        },
+        "authors": [
+            "92lleo <leonhard@kuenzler.io>"
+        ],
+        "keywords": [
+            "smart-me"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "smart-me.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/92lleo/ioBroker.smart-me/master/admin/smart-me.png",
+        "readme": "https://github.com/92lleo/ioBroker.smart-me/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "energy",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
